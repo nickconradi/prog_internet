@@ -1,0 +1,30 @@
+* {
+    margin: 5;
+    padding:5;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0dee8;
+}
+
+.box-model {
+    width: 300px;
+    height: 200px;
+    background-color: #a72472;
+    padding: 20px;  
+    border: 5px solid #ffecec; 
+    outline: 10px solid #e98ec0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
