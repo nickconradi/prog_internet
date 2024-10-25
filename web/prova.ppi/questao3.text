@@ -1,0 +1,21 @@
+3- as três formas de incluir css em um doc html são: inline, interno e externo. 
+um resumo geral do impacto das 3 formas é que css inline é mais prático e mais rápido  para realizar ajustes, mas pode atrapalhar a manuntenção e exibição.
+css interno é recomendado para páginas menores, não suportando páginas maiores. 
+e o css externo pode melhorar a organização, é capaz de suportar sites maiores, tendo também uma fácil manuntenção otimizando com cache. 
+
+a.No código o css inline é aplicado direto nos elementos de html por atributos.
+b.O css interno é definido dentro de uma tag(<style>) no(<head>) desse documento.
+c.E o css externo é armazenado em um outro arquivo separado e vinculado ao doc html com tag.
+arquivo separado:(style.css)
+tag:(<link> no (<head>)
+
+3.2-Os seletores permitem estilizar elementos com base em classe, id, atributos, tipo, etc.
+Que garantem que a página tenha uma ótima flexibilidade e controle dos elementos.
+Um exemplo seria as formas simples, por meio de tags, classes(.) e id(#).
+Ou também por meio de (div) ou (<)
+
+3.3- Tem o static(padrao), que os elementos seguem a ordem natural do html.
+O relative(relativo), em que o elemento é posicionado em relação a sua posição original.
+O absolute(absoluto), o elemento é posicionado em relação ao elemento pai mais próximo que tenha uma posição relativa ou absoluta, se não tiver nenhuma posição dessas, será alinhado ao (<html>).
+E o fixo, o elemento é fixo em relação a janela, e não se mexe ao dar scroll. 
+

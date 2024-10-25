@@ -1,0 +1,8 @@
+1- passo a passo para o acesso de uma página web. 
+a.Digite uma URL no navegador ou clique em um link, o navegador envia uma requisição HTTP ao servidor correspondente.
+b. O navegador consulta o DNS (Domain Name System) para traduzir o nome do domínio em um endereço IP do servidor.
+c.O navegador estabelece uma conexão com o servidor usando o endereço IP obtido.
+d.O navegador envia a requisição HTTP ao servidor, especificando o recurso desejado (por exemplo, uma página HTML).
+e.O servidor processa a requisição, busca o recurso solicitado e faz uma resposta HTTP.
+f. O servidor envia a resposta HTTP de volta ao navegador, contendo o recurso solicitado (como um arquivo HTML, JavaScript, etc)
+g.O navegador interpreta o HTML, aplica os estilos CSS e executa os scripts JavaScript para renderizar a página na tela do usuário.
