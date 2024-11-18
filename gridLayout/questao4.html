@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela baseada na Estrutura</title>
+    <style>
+
+
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        padding: 10px;
+        min-height: 100vh;
+        grid-template-areas:
+            "header header header header header"
+            "leftaside banner banner banner rightaside"
+            "leftaside main main main rightaside"
+            "leftaside main main main rightaside"
+            "leftaside main main main rightaside"
+            "leftaside main main main rightaside"
+            "leftaside main main main rightaside"
+            "leftaside lowcontent lowcontent lowcontent rightaside"
+            "footer footer footer footer footer";
+     }
+
+        .box {
+            background-color: rgb(255, 123, 123);
+            padding: 10px;
+            font-size: 1em;
+            text-align: left;
+            border-radius: 10px;}
+
+        #boxheader {
+            grid-area: header;
+            background-color: #ffff9f;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxbanner {
+            grid-area: banner;
+            background-color: rgb(255, 92, 92);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxleftaside {
+            grid-area: leftaside;
+            background-color: rgb(154, 255, 154);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxmain {
+            grid-area: main;
+            background-color: rgb(127, 127, 255);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxrightaside {
+            grid-area: rightaside;
+            background-color: rgb(255, 209, 124);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxlowcontent {
+            grid-area: lowcontent;
+            background-color: rgb(91, 131, 91);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #boxfooter {
+            grid-area: footer;
+            background-color: rgb(194, 194, 255);
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="boxheader">Header</div>
+        <div class="box" id="boxbanner">Banner</div>
+        <div class="box" id="boxleftaside">Left Aside</div>
+        <div class="box" id="boxmain">Main Content</div>
+        <div class="box" id="boxrightaside">Right Aside</div>
+        <div class="box" id="boxlowcontent">Low Content</div>
+        <div class="box" id="boxfooter">Footer</div>
+    </div>
+</body>
+</html>

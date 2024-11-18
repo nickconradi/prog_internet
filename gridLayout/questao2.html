@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição da tela</title>
+    <style>
+        *{
+            margin: 0x;
+            padding: 0px;
+        }
+
+        div{
+            border: 1px solid black;
+        }
+
+        #tela{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            grid-template-areas:
+            "header header   header   header"
+            "nav    content  content  content"
+            "nav    content  content  content"
+            "nav    footer   footer   footer"
+            ;
+        }
+        #header{grid-area: header; background-color: rgb(255, 131, 131);}
+        #nav{grid-area: nav; background-color: rgb(108, 108, 197);}
+        #content{grid-area: content; background-color: rgb(255, 214, 138);}
+        #footer{grid-area: footer; background-color: rgb(160, 255, 160);}
+    </style>
+</head>
+
+<body>
+    <div id="tela">
+        <div id="header">HEADER</div>
+        <div id="nav">NAV</div>
+        <div id="content">CONTENT</div>
+        <div id="footer">FOOTER</div>
+    </div>
+</body>
+</html>
