@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>14</title>
+    <title>16</title>
     <style>
-        #mae{
+        *{margin: 0px;}
+        #div{
             display: flex;
             min-height: 100vh;
             min-width: 100vw;
             justify-content: center;
             align-items: center;
         }
-        #bt{
-            min-height: 100px;
-            min-width: 100px;
-        }
     </style>
 </head>
 <body>
-    <div id="mae">
-        <button id="bt" onclick="clickar()">0</button>
+    <div id="div">
+        <button id="bt" onclick="clickar()">Altere a cor</button>
     </div>
+
     <script>
-        let cont = 0;
         let bt = document.getElementById("bt");
+        let div = document.getElementById("div");
 
         function clickar(){
-            bt.innerHTML = parseFloat(cont);
-            cont++;
+            let red = parseInt((Math.random()*255));
+            let blue = parseInt((Math.random()*255));
+            let green = parseInt((Math.random()*255));
+            div.style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
         }
     </script>
-    <!--
-    um você utiliza o .value =
-    no outro você utiliza o .innerHTML =
-    no input você muda o valor do campo e no botão você muda o texto dentro da tag
-    -->
 </body>
 </html>

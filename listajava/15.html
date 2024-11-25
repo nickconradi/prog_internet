@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset ="UTF-8">
-        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
-        <title>document</title>
-        <style>
-            body{
-                display: flex;
-                min-height: 100lvh;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        </style>
-    </head>
-    <body>
-        <label for="input_min">Valor minimo </label>
-        <input type="input_min" type=""number>
-        <label for="input_max">Valor maximo </label>
-        <input type="input_max" type=""number>
-    
-
-        <button>Gerar número Aleatório</button>
-        <p id="numSorteado"></p>
-
-        <script>
-            let pResultado = document.querySelector("#numSorteado")
-        let min=document.querySelector("input_min")
-        let max=document.querySelector("input_max")
-        //[min,max]
-
-        document.querySelector("button").addEventListener("click,()=>"){
-            minimo=Number.parseFloat(min.value);
-            maximo=Number.parseFloat(max.value);
-            pResultado.innerHTML=Math.round(Math.random())* (maximo)
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+    <style>
+        #mae{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: 100vw;
         }
+        #bt{
+            min-height: 100px;
+            min-width: 100px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mae">
+        <label for="" id="lmin">Mínimo</label>
+        <input type="text" id="min">
+        <label for="" id="lmax">Máximo</label>
+        <input type="text" id="max">
+        <button id="bt">Gerar Número Aleatório</button>
+        <label for="" id="numAleatorio">a</label>
+    </div>
+    <script>
+        let bt = document.getElementById("bt");
+        let lblresultado = document.getElementById("numAleatorio");
 
-        </script>
-    </body>
+        bt.addEventListener("click",clickar);
+        function clickar(){
+            let min = Number.parseFloat(document.getElementById("min").value);
+            let max = Number.parseFloat(document.getElementById("max").value);
+            let numAle = Math.random();
+            let resultado = Math.round(Math.random()*(max-min)+min);
+            lblresultado.innerText = resultado;
+        }
+    </script>
+</body>
 </html>
