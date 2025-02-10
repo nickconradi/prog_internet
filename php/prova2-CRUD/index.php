@@ -3,7 +3,7 @@ require_once "PessoaController.php";
 
 $pessoaController = new PessoaController();
 
-//lista as pessoas que estão cadastradas
+//lista pessoas que estão cadastradas
 try {
     $pessoas = $pessoaController->listarPessoa();
 } catch (Exception $e) {

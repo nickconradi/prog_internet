@@ -1,8 +1,8 @@
 <?php
-//pega as coisas da classe 
+//pega da classe 
 require_once "PessoaController.php";
 
-//pega o usuário que foi para editar
+//usuário que foi para editar
 if (!isset($_GET['id'])) {
     die("ID do usuário não foi fornecido!");
 }
@@ -11,7 +11,7 @@ $id = (int) $_GET['id'];
 
 $pessoaController = new PessoaController();
 
-//se o usuári existe, busca a pessoa por id
+//se usuário existe, busca por id
 try {
     $pessoa = $pessoaController->buscarPessoaPorId($id);
     if (!$pessoa) {
@@ -19,7 +19,7 @@ try {
     }
 } 
 
-//pega os dados enviados
+//pega dados enviados
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? null;
     $email = $_POST['email'] ?? null;

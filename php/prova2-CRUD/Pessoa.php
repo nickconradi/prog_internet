@@ -6,14 +6,14 @@ class Pessoa {
     public $email;
     public $senha;
 
-    //função que recebe, os parametros enviados
+    //função que recebe parametros enviados
     public function __construct($nome = null, $email = null, $senha = null) {
         $this->nome = $nome;
         $this->email = $email;
         $this->senha = $senha;
     }
 
-    //atiualiza 
+    //atualiza 
     public function setAll($nome, $email, $senha) {
         $this->nome = $nome;
         $this->email = $email;

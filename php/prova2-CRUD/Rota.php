@@ -20,7 +20,7 @@ switch ($action) {
         break;
 
         case 'editar':
-            $id = $_POST['id']; // Certifique-se de que o ID está sendo enviado corretamente no formulário
+            $id = $_POST['id']; // Certifica que o ID está sendo enviado corretamente no formulário
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $senha = $_POST['senha'] ?? null;

@@ -1,15 +1,14 @@
 <?php
 include_once "PessoaController.php";
 
-//ve se o usuário foi
+//verificao usuário 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    //cria uma instancia pra classe
+    //cria instancia pra classe
     $pessoaController = new PessoaController();
 
-    //exclui a pessoa que o id foi selecionado
-    //se a pessoa for rexcluida volta ao index(listagem)
+    //exclui pessoa que o id foi selecionado, se pessoa for rexcluida volta ao index
     if ($pessoaController->excluirPessoa($id)) {
         header("Location: index.php");
     } else {

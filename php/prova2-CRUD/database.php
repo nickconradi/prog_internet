@@ -8,9 +8,9 @@ function conectDb() {
     $db= new PDO( "mysql:host=$host;dbname=$database",  $user,password:$pass);
     $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //xhcando se a conexao foi estabelecida con ucesso e retornando a conexao 
+    //veriica se a conexao foi estabelecida com sucesso, retornando a conexao 
     
-    //função que conecta com o banco de dados e retorna a conexão com banco ou false
+    //função que conecta com o banco de dados e retorna a conexão com banco ou nao
     if ($db) {
         return $db;
     }
