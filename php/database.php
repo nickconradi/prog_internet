@@ -1,27 +1,34 @@
 <?php
-/* Função que conecta com o banco de dados e retorna a conexão com o banco ou false */
+/*função que conecta com o banco de dados e retorna a conexão com banco ou false */
 
 function conectDb() {
-    $user = "root";
-    $pass = "aluno";
-    $database = "crud";
-    $host = "localhost";
+    $user="root";
+    $pass="aluno";
+    $database="crud";
+    $host="localhost";
 
-    try {
-        $db = new PDO("mysql:host=$host;dbname=$database", $user, $pass);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db=new PDO( "mysql:host=$host;dbname=$database",  $user,password:$pass);
+    $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
+    
+
+    if ($db) {
         return $db;
-    } catch (PDOException $e) {
-        echo "Erro ao conectar ao banco: " . $e->getMessage();
+    }
+    else {
         return false;
     }
+
 }
 
-function check_conn($conn_id): void {
-    if ($conn_id) {
-        echo "Conexão concluída";
-    } else {
-        echo "Erro ao conectar";
-    }
+function check_conn($conn_id): void{
+    if ($conn_id ) {
+        echo "Conexao concluida";
 }
-?>
+    else {
+        echo "Erro ao conectar";
+}
+}
+
+
+ ?>

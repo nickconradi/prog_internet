@@ -1,20 +1,41 @@
-// Função para editar um usuário
-function editar_usuario($id, $nome, $email) {
+<?php
+include_once("database.php");
+
+function insere_usuarios($nome, $email)
+{
     $db = conectDb();
-    $sql = "UPDATE usuario SET nome = ?, email = ? WHERE idusuario = ?";
+    $sql = "INSERT INTO usuario (nome, email) VALUES (?, ?)";
     $stmt = $db->prepare($sql);
-    
-    // Bind dos parâmetros
     $stmt->bindValue(1, $nome, PDO::PARAM_STR);
     $stmt->bindValue(2, $email, PDO::PARAM_STR);
-    $stmt->bindValue(3, $id, PDO::PARAM_INT);
-    
-    try {
+
+    try{
         $stmt->execute();
-        echo "Usuário editado com sucesso!";
-    } catch (PDOException $e) {
-        echo "Erro ao editar usuário: " . $e->getMessage();
+        echo "Usuáios inserido com sucesso!";
+    } catch (PODException $e){
+        echo "Erro ao inserir usuário: " . $e->getMessage();
     }
-    
+
     $db = null;
 }
+
+/* função retorna */
+function recupera_lista_usuarios(){
+    $db = conectDb();
+    $sql = "SELECT * FROM usuario  ";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return($resultado);
+}
+function getUsuario($id){
+    $database=conectDb();
+    $sql="select * from usuario where idusuario=?";
+    $stmt= $database->prepare($sql);
+    $stmt->bindValue(1,$id);
+    $stmt->execute();
+    $resultado= $stmt->fetchALL(PDO::FETCH_ASSOC);
+return($resultado);}
+
+
+?>
